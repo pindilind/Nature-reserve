@@ -1,7 +1,7 @@
 <?php 
 
-    /* SUPERKLASS */
-    abstract class Animal {
+   /* SUPERKLASS */
+   /*  abstract class Animal {
 
         function __construct($coconut, $monkey, $giraffe, $tiger) {
             $this->coconut = $coconut;
@@ -24,7 +24,7 @@
         }
     }
 
-   /*  class monkey extends Animal {
+   class monkey extends Animal {
         function __construct($coconut, $monkey, $giraffe, $tiger, $name) {
 
             $this->name = $name

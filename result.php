@@ -10,13 +10,50 @@
 <body>
     <?php
 
+    /* SUPERKLASS = ABSTRACT */
+    abstract class Animal {
 
-    require("./animal.php");
+        function __construct($img, $name) {
+            $this->img = $img;
+            $this->name = $name;
+           
+        }
 
-    $newAnimal = new Animal($_POST["coconut"], $_POST["monkey"], $_POST["giraffe"], $_POST["tiger"]);
+        public $imge;
+        public $name;
+        
+    };
 
-    print_r($newAnimal);
-   
+    abstract class makeSound {
+
+    }
+
+
+    class coconut extends Animal {
+        function __construct($name) {
+           
+        }
+    }
+
+   class monkey extends Animal {
+        function __construct($name) {
+
+        }
+    }
+
+    class giraffe extends Animal {
+        function __construct($name) {
+
+        }
+    }
+
+    class tiger extends Animal {
+        function __construct($name) {
+            
+            
+        }
+    }
+
     ?>
 </body>
 
