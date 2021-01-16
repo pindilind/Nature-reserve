@@ -8,53 +8,71 @@
 </head>
 
 <body>
-    <?php
+<?php
 
-    /* SUPERKLASS = ABSTRACT */
-    abstract class Animal {
+    class Animal {
+        function __construct($name, $img) {
 
-        function __construct($img, $name) {
-            $this->img = $img;
             $this->name = $name;
-           
+            $this->img = $img;
         }
 
-        public $imge;
         public $name;
-        
+        public $img;
     };
 
-    abstract class makeSound {
 
-    }
+    class monkey extends Animal {
+        function __construct($name, $img) { 
 
-
-    class coconut extends Animal {
-        function __construct($name) {
-           
+            parent::__construct($name, $img);
+            $this->name = $name;
+            $this->img = "./monkey.png";
         }
+
+        public $name;
+        public $img;
     }
 
-   class monkey extends Animal {
-        function __construct($name) {
-
-        }
-    }
 
     class giraffe extends Animal {
-        function __construct($name) {
+        function __construct($name, $img) {
+            parent::__construct($name, $img);
 
+            $this->name = $name;
+            $this->img = "./giraffe.png";
         }
+        public $name;
+        public $img;
     }
 
     class tiger extends Animal {
-        function __construct($name) {
-            
-            
+        function __construct($name, $img) {
+            parent::__construct($name, $img);
+
+            $this->name = $name;
+            $this->img = "./tiger.png";
         }
+        public $name;
+        public $img;
     }
 
-    ?>
+    
+    $monkey = $_POST["monkey"];
+    for ( $i=0; $i < $monkey; $i++) { 
+        echo "skapa apa";
+    }
+
+
+    $newAnimal = new Animal($_POST["name"], $_POST["img"]);
+    /*  $newFruit = new Fruit($_POST["coconut"]);*/
+    print_r($newAnimal);
+    echo '<br>';
+    /* print_r($newFruit) */
+
+
+?>
+
 </body>
 
 </html>
