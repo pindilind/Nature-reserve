@@ -6,7 +6,7 @@
     <title>ANIMALS</title>
 </head>
 <body>
-    <form action="./result.php" method="post">
+    <form action="./result.php" method="POST">
     <input placeholder="Coconut" type="text" name="coconut">
     <input placeholder="Monkey" type="text" name="monkey">
     <input placeholder="Giraffe" type="text" name="giraffe">
