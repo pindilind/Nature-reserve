@@ -11,6 +11,7 @@
 <?php
 
     class Animal {
+
         function __construct($name, $img) {
 
             $this->name = $name;
@@ -19,12 +20,15 @@
 
         public $name;
         public $img;
-    };
+
+        public function showImg() {
+            echo "<img style=max-width:30px;' src='".$this->$img."'>";   
+        } 
+    }
 
 
     class monkey extends Animal {
         function __construct($name, $img) { 
-
             parent::__construct($name, $img);
             $this->name = $name;
             $this->img = "./monkey.png";
@@ -32,6 +36,8 @@
 
         public $name;
         public $img;
+
+       
     }
 
 
@@ -60,8 +66,24 @@
     
     $monkey = $_POST["monkey"];
     for ( $i=0; $i < $monkey; $i++) { 
-        echo "skapa apa";
-    }
+        echo $monkey();
+    };
+
+    $giraffe = $_POST["giraffe"];
+    for ( $i=0; $i < $giraffe; $i++) { 
+        echo $giraffe;
+    };
+
+    $tiger = $_POST["tiger"];
+    for ( $i=0; $i < $tiger; $i++) { 
+        echo $tiger;
+    };
+
+
+
+    
+
+
 
 
     $newAnimal = new Animal($_POST["name"], $_POST["img"]);
